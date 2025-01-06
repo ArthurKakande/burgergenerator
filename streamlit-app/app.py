@@ -136,7 +136,7 @@ def visualize_step(step, burger_layers, placeholder):
     placeholder.write("\nCurrent Burger Stack:")
     for layer in reversed(burger_layers):
         placeholder.write(layer)
-    time.sleep(1)  # Pause for visualization
+    time.sleep(3)  # Pause for visualization
 
 # Simulate the burger assembly
 def simulate_burger_assembly(steps):
@@ -226,7 +226,7 @@ def assemble_burger(ingredients, desired_outcome):
 st.title("Burger Generator")
 st.write("This app simulates the assembly of various burgers, sandwiches, and wraps based on user-provided ingredients and desired outcomes. The app uses concepts from Case-Based Reasoning (CBR) for planning tasks and Robotic Process Automation (RPA) to assemble the snack. Where the requested ingredient isnt available, the robot will suggest a suitable replacement using adaptation knowledge obtained from what previous customers took.")
 ingredients_input = st.text_input("Enter ingredients (comma-separated):")
-outcome_input = st.selectbox("Select desired burger name:", ["Cheeseburger", "Chicken Burger", "Veggie Burger", "Turkey Sandwich", "Ham Sandwich", "Chicken Wrap", "Veggie Wrap"])
+outcome_input = st.selectbox("Select desired snack:", ["Cheeseburger", "Chicken Burger", "Veggie Burger", "Turkey Sandwich", "Ham Sandwich", "Chicken Wrap", "Veggie Wrap"])
 
 if st.button("Assemble Snack"):
     ingredients = [ingredient.strip() for ingredient in ingredients_input.split(',')]
